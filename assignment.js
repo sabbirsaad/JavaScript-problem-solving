@@ -26,7 +26,7 @@ function budgetCalculator(watch, phone, laptop) {
         return result;
     }
     else {
-        return 'Budget cannot be negative';
+        return 'Number of Element cannot be negative';
     }
 
 }
@@ -53,9 +53,35 @@ function hotelCost(days) {
     }
 
     else {
-        return 'Rent cannot be negative or zero';
+        return 'Days cannot be negative or zero';
     }
 
 }
 var totalRent = hotelCost(30);
 console.log(totalRent);
+
+//problem_no: 04
+
+function megaFriend(name) {
+    if (name.length !== 0) { //check the array is empty or not.
+        var largestName = name[0];
+        for (var i = 0; i < name.length; i++) {
+            if (typeof name[i] == "string") { //check the array element is string or not.
+
+                if (largestName.length < name[i].length) {
+                    largestName = name[i];
+                }
+            }
+            else {
+                return 'Array element is not a string';
+            }
+        }
+        return largestName;
+    }
+
+    else {
+        return 'Empty array';
+    }
+}
+var largestFriendName = megaFriend(['sabbir','saad','rafiul','asif','sajib']);
+console.log(largestFriendName);
